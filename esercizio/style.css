@@ -35,7 +35,7 @@ ul li:hover {
 
 /* background color quando cliccato */
 ul li.checked {
-  background: rgb(0, 174, 20);
+  background: #2bff00;
   text-decoration: line-through;
 }
 
