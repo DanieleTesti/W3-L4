@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        max-width: 900px;
+        background-color: black;
+        padding: 0.5rem;
+        border-radius: 6px;
+        color: white;
+      }
+
+      .day {
+        display: inline-block;
+        border: 1px solid white;
+        border-radius: 3px;
+        width: 13.7%;
+        aspect-ratio: 1/1;
+        text-align: center;
+      }
+
+      .day.span {
+        position: relative;
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .selectedDay {
+        background-color: palegreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Loading...</h1>
+
+    <div class="container"></div>
+
+    <script>
+      const mounth = [
+        "Gennaio",
+        "Febbraio",
+        "Marzo",
+        "Aprile",
+        "Maggio",
+        "Giugno",
+        "Luglio",
+        "Agosto",
+        "Settembre",
+        "Ottobre",
+        "Novembre",
+        "Dicembre",
+      ];
+      const now = new Date();
+
+      const thisMounth = now.getMonth();
+      const thisYear = now.getFullYear();
+
+      const lastDayObj = new Date(thisYear, thisMounth + 1, 0);
+      const lastDay = lastDayObj.getDate();
+
+      console.log(lastDay);
+
+      //FINO A QUI CREO IL NUMERO DI GIORNI
+
+      window.onload = function () {
+        const container = document.querySelector(".container");
+        console.log(container);
+
+        const title = document.querySelector("h1");
+        title.onmouseover = function () {
+          //MOUSE SULL'OGGETTO
+          alert("sei andato sopra al titolo");
+        };
+        title.innerText = mounth[thisMounth];
+
+        for (let i = 0; i < lastDay; i++) {
+          const day = document.createElement("div");
+          day.className = "day";
+
+          day.onclick = function (event) {
+            // console.log(event);    PER VEDERE L PROPRIETA'
+            event.currentTarget.classList.add("selectedDay"); //CURRENT TARGER PER FAR COLORARE TUTTA LA TABELLA, MENTRE TARGET SOLO QUELLLO CHE CLICCHI
+          };
+
+          const innerSpan = document.createElement("span");
+          innerSpan.innerText = i + 1;
+          day.appendChild(innerSpan);
+          container.appendChild(day);
+        }
+      };
+    </script>
+  </body>
+</html>

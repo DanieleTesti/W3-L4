@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  min-width: 250px;
+}
+
+/* Include the padding and border in an element's total width and height */
+/* * {
+  box-sizing: border-box;
+} */
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* stile lista */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+}
+
+/*  (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* background color quando cliccato */
+ul li.checked {
+  background: rgb(0, 174, 20);
+  text-decoration: line-through;
+}
+
+/* stile della X */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+/* .close:hover {
+  background-color: #f44336;
+  color: white;
+} */
+
+.header {
+  background-color: #36abf4;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* pulizia header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* stile input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/*stile "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* .addBtn:hover {
+    background-color: #bbb;
+} */
+
+/* Add a "checked" mark when clicked on */
+/* ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+} */
