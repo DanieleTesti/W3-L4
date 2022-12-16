@@ -8,7 +8,7 @@ for (let i = 0; i < listaNodo.length; i++) {
   span.appendChild(txt);
   listaNodo[i].appendChild(span);
 }
-
+//eliminare
 let close = document.getElementsByClassName("close");
 for (let i = 0; i < close.length; i++) {
   close[i].onclick = function () {
@@ -17,6 +17,7 @@ for (let i = 0; i < close.length; i++) {
   };
 }
 
+//evidenziare
 let list = document.querySelector("ul");
 list.addEventListener(
   "click",
@@ -35,7 +36,7 @@ function newElement() {
   let t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === "") {
-    alert("You must write something!");
+    alert("Scrivi qualcosa da aggiungere alla to-do list");
   } else {
     document.getElementById("list").appendChild(li);
   }

@@ -23,12 +23,11 @@ ul li {
   font-size: 18px;
 }
 
-/*  (zebra-stripes) */
+/*  colori diversi */
 ul li:nth-child(odd) {
   background: #f9f9f9;
 }
 
-/* Darker background-color on hover */
 ul li:hover {
   background: #ddd;
 }
